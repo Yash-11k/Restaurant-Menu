@@ -1,34 +1,32 @@
-# Restaurant-Menu
-#define the menu of a hotel 
-menu = {
-    'pizza': 40,
-    'pasta': 30,
-    'burger':60,
-    'cake': 15
-}
-#Greet
-print("Welcome to the Python restaurant!")
-print("We have the following items in our menu:")
-print("pizza: Rs40\npasta: Rs30\nburger: Rs60\ncake: Rs15\n")
+# 🍔 Python Restaurant Menu System
 
-order_total= 0
+A simple, interactive command-line application built in Python that allows customers to view a restaurant menu, select food items, and calculate their total bill.
 
-item_1 = input("Enter your first item to order:")
-if item_1 in menu:
-    order_total+= menu[item_1]
-    print(f"Your item {item_1} is added to your order")
+## 🚀 Features
+* **Interactive Menu:** Displays current food items alongside their prices in Indian Rupees (Rs).
+* **Dynamic Cart:** Tracks and updates the order total in real-time.
+* **Order Support:** Allows users to order multiple items sequentially.
+* **Error Handling:** Gracefully informs users if an requested item is unavailable.
 
-else:
-    print(f"Sorry, ordered item {item_1} is not in the menu yet!")
-    
+## 📋 Menu Pricing
 
-another_order = input("Do you want to order another item? (Yes/No): ")
-if another_order.lower() == "yes":
-    item_2 = input("Enter your second item to order:")
-    if item_2 in menu:
-        order_total += menu[item_2]
-        print(f"Your item {item_2} is added to your order")
-    else:
-        print(f"Order item {item_2} is not in menu yet")
+| Item | Price |
+| :--- | :--- |
+| Pizza | Rs 40 |
+| Pasta | Rs 30 |
+| Burger | Rs 60 |
+| Cake | Rs 15 |
 
-    print(f"Your total order is Rs{order_total}")
+## 🛠️ How to Run
+1. Ensure you have **Python 3.x** installed on your system.
+2. Clone this repository or download the source code.
+3. Open your terminal or command prompt (PS) inside the project folder.
+4. Run the program using the following command:
+   ```bash
+   python main.py
+   ```
+
+## 📝 Future Improvements
+* Add a continuous loop allowing unlimited item orders until the user explicitly checks out.
+* Implement custom quantity options for each item selected.
+* Create a graphical user interface (GUI) or web version.
